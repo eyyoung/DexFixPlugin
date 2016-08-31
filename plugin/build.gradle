@@ -33,16 +33,3 @@ version = '0.1.1-SNAPSHOT'
 //        }
 //    }
 //}
-
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository(url: 'http://nexus.sdp.nd/nexus/content/repositories/android') {
-                authentication(userName: "deployment", password: 'deployment123')
-            }
-            pom.version = '0.1.2'
-            pom.artifactId = 'plugin'
-            pom.groupId = 'me.young.android.gradle.dexfix'
-        }
-    }
-}
