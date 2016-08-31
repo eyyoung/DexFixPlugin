@@ -1,6 +1,15 @@
 apply plugin: 'groovy'
 apply plugin: 'maven'
 
+configurations {
+    provided {
+        dependencies.all { dep ->
+            configurations.default.exclude group: dep.group, module: dep.name
+        }
+    }
+    compile.extendsFrom provided
+}
+
 dependencies {
     compile gradleApi()
     compile localGroovy()
@@ -11,7 +20,7 @@ dependencies {
         compileOnly 'com.android.tools.build:gradle-core:2.2.0-beta2'
     } catch (e) {
         provided 'com.android.tools.build:builder:2.2.0-beta2'
-        compileOnly 'com.android.tools.build:gradle-core:2.2.0-beta2'
+        provided 'com.android.tools.build:gradle-core:2.2.0-beta2'
     }
 }
 
