@@ -1,9 +1,9 @@
 buildscript {
     repositories {
-        maven { url 'http://nexus.sdp.nd/nexus/content/groups/android-public/' }
+        maven { url 'https://jitpack.io' }
     }
     dependencies {
-        classpath 'me.young.android.gradle.dexfix:plugin:0.1.2'
+        classpath 'com.github.eyyoung:DexFixPlugin:1.0.0'
     }
 }
 
