@@ -6,8 +6,13 @@ dependencies {
     compile localGroovy()
     compile files('libs/dx.jar')
     compile files('libs/proguard.jar')
-    compileOnly 'com.android.tools.build:builder:2.2.0-beta2'
-    compileOnly 'com.android.tools.build:gradle-core:2.2.0-beta2'
+    try {
+        compileOnly 'com.android.tools.build:builder:2.2.0-beta2'
+        compileOnly 'com.android.tools.build:gradle-core:2.2.0-beta2'
+    } catch (e) {
+        provided 'com.android.tools.build:builder:2.2.0-beta2'
+        compileOnly 'com.android.tools.build:gradle-core:2.2.0-beta2'
+    }
 }
 
 repositories {
