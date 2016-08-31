@@ -24,7 +24,6 @@ android {
     }
     buildTypes {
         debug {
-            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         release {
@@ -55,6 +54,6 @@ dependencies {
     compile 'com.facebook.android:facebook-android-sdk:3.19.1'
 }
 
-dexFix {
-    mainDexRules 'mainDexClasses.rules'
-}
+//dexFix {
+//    mainDexRules 'mainDexClasses.rules'
+//}

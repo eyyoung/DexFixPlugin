@@ -16,6 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".methodpool1.A"/>
+        <activity android:name=".methodpool1.B"/>
+        <activity android:name=".methodpool1.C"/>
+        <activity android:name=".methodpool1.D"/>
+        <activity android:name=".methodpool1.E"/>
+        <activity android:name=".methodpool1.F"/>
     </application>
 
 </manifest>
