@@ -1,11 +1,9 @@
 buildscript {
     repositories {
-        maven {
-            url uri('../repo')
-        }
+        maven { url 'http://nexus.sdp.nd/nexus/content/groups/android-public/' }
     }
     dependencies {
-        classpath 'me.young.android.gradle.dexfix:plugin:0.1.1-SNAPSHOT'
+        classpath 'me.young.android.gradle.dexfix:plugin:0.1.2'
     }
 }
 
@@ -13,9 +11,6 @@ apply plugin: 'com.android.application'
 apply plugin: 'dexfix'
 
 android {
-
-    def mainDexPath = String.format("%s/dexfix/maindexlist.test", project.getBuildDir())
-
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
 

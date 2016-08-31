@@ -1,1 +1,4 @@
-include ':app', ':plugin'
+if (hasProperty('LOCAL_BUILD_ENV')) {
+    include ':app'
+}
+include ':plugin'
