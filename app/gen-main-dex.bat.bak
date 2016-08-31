@@ -1,0 +1,1 @@
+etc\mainDexClasses.bat --output maindex.keep .\build\intermediates\transforms\proguard\debug\jars\3\1f\main.jar
