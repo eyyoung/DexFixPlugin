@@ -7,6 +7,12 @@ DexFixPlugin
 
 Fix "Too many classes in –main-dex-list"
 
+## Need To Know
+
+* Gradle Plugin Must >=2.2.0-beta2
+* Avoid the Main Application Class Dep too much Class
+* Not Support Instant Run Function
+
 # Install
 
 Add Class Path
@@ -68,8 +74,3 @@ Keep Extend and Annotation Class
 	*;
   }
 ```
-
-## Need To Know
-
-* Gradle Plugin Must >=2.2.0-beta2
-* Avoid the Main Application Class Dep too much Class
