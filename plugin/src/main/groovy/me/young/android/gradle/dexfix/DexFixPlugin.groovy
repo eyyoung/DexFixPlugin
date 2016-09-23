@@ -24,7 +24,7 @@ public class DexFixPlugin implements Plugin<Project> {
             }
         });
         DexOptions dexOptions = project.android.dexOptions
-        def mainDexPath = String.format("%s/dexfix/maindexlist.rule", project.getBuildDir())
+        def mainDexPath = String.format("%s/dexfix/maindexlist.keep", project.getBuildDir())
         dexOptions.additionalParameters("--multi-dex",
                 "--main-dex-list=${mainDexPath}".toString(),
                 "--set-max-idx-number=64000")
